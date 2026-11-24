@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-ceipal-orange: #F46933;
+  --color-ceipal-orange-hover: #DE5722;
+  --color-ceipal-gold: #FFC543;
+  --color-ceipal-navy: #0B1F3A;
+  --color-ceipal-navy-mid: #132F54;
+  --color-ceipal-surface: #F5F7FA;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+
+  button,
+  [role="button"],
+  a,
+  select,
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid #F46933;
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
